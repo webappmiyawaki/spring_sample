@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+    <title>課題削除 | 課題管理アプリケーション</title>
+</head>
+<body>
+<a href="../index.html" th:href="@{/}">トップページ</a>
+<a href="./creationForm.html" th:href="@{/issuesCreate/creationForm}">作成</a>
+<a href="./deleteForm.html" th:href="@{/issuesDelete/deleteForm}">削除</a>
+<h1>課題削除</h1>
+<form action="#" th:action="@{/issuesDelete/delete_method}" th:method="post" th:object="${deleteForm}">
+    <div>
+        <label for="idInput">id</label>
+        <input type="text" id="idInput" th:field="*{id}">
+    </div>
+
+    <div>
+        <label for="summaryInput">summary</label>
+        <input type="text" id="summaryInput" th:field="*{summary}">
+    </div>
+    <div>
+        <button type="submit">削除</button>
+    </div>
+</form>
+
+</body>
+</html>

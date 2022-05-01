@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_header :: header(~{::title})">
+  <title>トップページ｜課題管理アプリケーション</title>
+</head>
+<body>
+<h3>課題管理アプリケーション</h3>
+<div>
+    <a href="./issues/list.html" th:href="@{/issuesTop}">課題一覧</a>
+</div>
+
+</body>
+</html>
